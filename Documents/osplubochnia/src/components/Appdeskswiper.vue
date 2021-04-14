@@ -4,7 +4,7 @@
  <!-- Swiper -->
   <div class="swiper-container">
       <div class="swiper-wrapper">
-         <div class="swiper-slide" v-for="item in items" v-bind:key="item.id"><img :src="item.img" />
+         <div class="swiper-slide" v-for="item in items" :key="item.id"><img :src="item.img" />
  
          </div>
        

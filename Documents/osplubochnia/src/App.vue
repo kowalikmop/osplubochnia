@@ -1,3 +1,4 @@
+
 <template>
 
 <div class="wrapper">
@@ -12,19 +13,22 @@
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#home">Akcje</a>
+      <a class="nav-link active" data-toggle="tab" href="#akcje">Akcje</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu1">Ćwiczenia</a>
+      <a class="nav-link" data-toggle="tab" href="#cwiczenia">Ćwiczenia</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" data-toggle="tab" href="#zarzad">Zarząd</a>
+    </li>
+       <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#wykres">Statystyki</a>
     </li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div id="home" class="container tab-pane active"><br>
+    <div id="akcje" class="container tab-pane active"><br>
      <div class="gallery">
         <img class="item" src="../src/assets/akcje1.jpg" alt="">
         <img class="item" src="../src/assets/akcje2.jpeg" alt="">
@@ -73,7 +77,7 @@
        </div>
       </div>
 
-    <div id="menu1" class="container tab-pane active"><br>
+    <div id="cwiczenia" class="container tab-pane active"><br>
     <div class="galleryy">
         <img class="item" src="../src/assets/cwiczenia1.jpg" alt="">
         <img class="item" src="../src/assets/cwiczenia2.jpg" alt=""> 
@@ -97,30 +101,32 @@
       </div>
     </div>
 
-    <div id="zarzad" class="container tab-pane active"><br>
+  <div id="zarzad" class="container tab-pane active"><br>
+  <Appcardbody/>
+  </div>
 
-<Appcardbody />
-
-    </div>
-
+  <div id="wykres" class="container tab-pane active"><br>
+    <Chart/>
+  </div>
 
   </div>
   </div>
   </div>
-
 
 
 </template>
+
 
 <script>
 import Appdeskswiper from './components/Appdeskswiper.vue';
 import Appmobileswiper from './components/Appmobileswiper.vue';
 import Appcardbody from './components/Appcardbody.vue';
+import Chart from './components/Chart.vue';
 
 export default {
 
 name: 'App',
-components: { Appdeskswiper, Appmobileswiper, Appcardbody },
+components: { Appdeskswiper, Appmobileswiper, Appcardbody, Chart },
 
   data() {
      return {
@@ -143,6 +149,7 @@ components: { Appdeskswiper, Appmobileswiper, Appcardbody },
 };
 
 </script>
+
 
 <style scoped>
 
